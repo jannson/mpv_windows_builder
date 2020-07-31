@@ -1,0 +1,17 @@
+mpv:
+  build: ./
+  hostname: mpv
+  container_name: mpv
+  working_dir: /projects/github/mpv
+  entrypoint: /bin/bash
+  user: 1000:1000
+  environment:
+    - LANG=en_US.utf8
+    - LANGUAGE=en_US:en
+    - LC_ALL=en_US.utf8
+    - USER=xiaobao
+  volumes:
+    - "/projects:/projects"
+  restart: always
+  stdin_open: true
+  tty: true
